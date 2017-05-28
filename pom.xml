@@ -4,7 +4,7 @@
 	<groupId>com.bayrak</groupId>
 	<artifactId>docker.spark</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spark-Docker</name>
+	<name>Spark-Master-Docker</name>
 	<build>
 		<plugins>
 			<plugin>
@@ -15,10 +15,26 @@
 					<images>
 						<image>
 							<name>bayraktar/spark</name>
-							<alias>spark</alias>
+							<alias>bayraktar/spark</alias>
 							<!-- Configure build settings -->
 							<build>
-								<dockerFileDir>${project.basedir}/src/main/resources</dockerFileDir>
+								<dockerFile>${project.basedir}/src/main/resources</dockerFile>
+								<tags>
+									<tag>latest</tag>
+									<tag>${project.version}</tag>
+								</tags>
+							</build>
+						</image>
+						<image>
+							<name>bayraktar/spark</name>
+							<alias>bayraktar/spark</alias>
+							<!-- Configure build settings -->
+							<build>
+								<dockerFile>${project.basedir}/src/main/resources</dockerFile>
+								<tags>
+									<tag>latest</tag>
+									<tag>${project.version}</tag>
+								</tags>
 							</build>
 						</image>
 					</images>
