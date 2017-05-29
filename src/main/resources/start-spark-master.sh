@@ -10,6 +10,4 @@ echo "Spark master webui port: " $SPARK_MASTER_WEBUI_PORT	#8088
 cd $SPARK_HOME && ./bin/spark-class org.apache.spark.deploy.master.Master \
     -h $SPARK_MASTER_HOST \
     -p $SPARK_MASTER_PORT \
-    --webui-port $SPARK_MASTER_WEBUI_PORT \
-    -c 2 \
-    -m 2GB
+    --webui-port $SPARK_MASTER_WEBUI_PORT
